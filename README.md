@@ -1,5 +1,5 @@
 # SE_Lab_PES1UG24CS373
-# Alumni Mentorship & Mock Interview Platform
+# Alumni Mentorship & Mock Interview Platform (Lab 1-3)
 
 **Course:** Software Engineering Labs
 **Problem Statement:** #06 — Campus & Academic Operations
@@ -73,4 +73,38 @@ Contains:
 - **Written Justification** — architecture selection, two scenario-specific reasons, one security advantage, one performance benefit.
 
 ---
+# Balloon Pop (Lab 4- Vibe coding)
+
+A simple Balloon Pop game built using **Python and Pygame**.
+
+## Features
+
+* Fixed balloon click detection.
+* Added 3 balloon types:
+
+  * Normal: +10
+  * Bonus: +25
+  * Penalty: -10
+* Added 3 lives; missing a balloon costs 1 life.
+* Added a 30-second countdown timer.
+* Added game-over and restart functionality.
+* Added visual indicators for score, lives, and time.
+* Added videos.
+
+## Run
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the game:
+
+```bash
+python main.py
+```
+
+Press **R** after game over to restart.
+
 ```
