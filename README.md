@@ -90,6 +90,7 @@ A simple Balloon Pop game built using **Python and Pygame**.
 * Added game-over and restart functionality.
 * Added visual indicators for score, lives, and time.
 * Added videos.
+* Please check the link to the forked repository - https://github.com/ridhima-jain45/05_balloon_pop
 
 ## Run
 
