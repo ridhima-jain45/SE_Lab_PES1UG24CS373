@@ -1,4 +1,3 @@
-
 """
 Movie Theater Seat Reservation System.
 
@@ -46,7 +45,7 @@ def release_seat(show_id, seat_number):
 
 def ticket_code(show_id, seat_number):
     """Generate a ticket code for a particular seat."""
-    return hashlib.md5(
+    return hashlib.sha256(
         (show_id + str(seat_number)).encode()
     ).hexdigest()[:8]
 
@@ -96,7 +95,7 @@ def main():
     load_reservations()
     print_seating_summary()
 
-    os.chmod("seats.json", 0o777)
+    os.chmod("seats.json", 0o600)
 
 
 if __name__ == "__main__":
