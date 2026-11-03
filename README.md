@@ -108,4 +108,101 @@ python main.py
 
 Press **R** after game over to restart.
 
+# Lab 5 – Static Code Analysis
+
+## Overview
+This lab focuses on using static code analysis tools to identify and fix code quality, security, and formatting issues in a Python application.
+
+The application used for analysis is a **Movie Theater Seat Reservation System** (`theater_system.py`), which supports seat reservations, releasing seats, generating ticket codes, and saving/loading reservation data.
+
+## Tools Used
+- **Pylint** – Checks code quality, naming conventions, documentation, and potential programming errors.
+- **Bandit** – Identifies potential security vulnerabilities in Python code.
+- **Flake8** – Checks Python code for formatting and style violations.
+
+## Work Performed
+1. Created a Python virtual environment and installed the required analysis tools.
+2. Ran Pylint, Bandit, and Flake8 on the original application to identify issues.
+3. Recorded the initial analysis results in separate report files.
+4. Fixed the identified issues, including:
+   - Mutable default arguments.
+   - Bare exception handling.
+   - Weak MD5 hashing.
+   - Overly permissive file permissions.
+   - Missing docstrings and incorrect naming conventions.
+   - File-handling and formatting issues.
+5. Ran all three tools again to verify the corrections.
+6. Saved the final analysis results in separate report files.
+
+## Final Results
+- **Pylint:** 10.00/10
+- **Bandit:** No issues identified.
+- **Flake8:** 0 violations.
+
+## Repository Contents
+- `theater_system.py` – Corrected Python application.
+- `CodeCoverageTest_...` – Not applicable to this lab.
+- `pylint_report_before.txt` and `pylint_report_after.txt`
+- `bandit_report_before.txt` and `bandit_report_after.txt`
+- `flake8_report_before.txt` and `flake8_report_after.txt`
+- `issues.md` – Summary of identified issues and their fixes.
+
+## Commits
+The fixes were committed separately to maintain a clear history of the changes made for Pylint, Bandit, and Flake8.
+
+## Conclusion
+The lab provided practical experience in static code analysis and demonstrated how automated tools can improve Python code quality, security, readability, and consistency.
+
+# Lab 6 – Code and Branch Coverage Analysis
+
+## Objective
+To analyse the code and branch coverage of the Bookstore Trade-In application using Python's `pytest` and `coverage` tools.
+
+## Work Completed
+
+1. Analysed the existing `bookstore_trade_in.py` application and identified its functions and decision branches.
+2. Created separate Python test files for code coverage and branch coverage.
+3. **Code Coverage:** Created `CodeCoverageTest_application.py` with test cases covering input validation, book formats, conditions, payouts, rejection scenarios, and scanner calibration.
+4. **Branch Coverage:** Created `BranchCoverageTest_application.py` with test cases to exercise both outcomes of conditional statements and different execution paths.
+5. Executed the tests using `pytest` and measured coverage using the `coverage` package.
+6. Recorded before-and-after coverage results using terminal screenshots.
+7. Maintained separate Git commits for the code coverage and branch coverage test files.
+
+## Final Results
+
+| Metric | Before | After |
+|---|---:|---:|
+| Code Coverage | 49% | 100% |
+| Branch Coverage | 45% | 100% |
+
+- Code coverage: **13 tests passed**
+- Branch coverage: **29 tests passed**
+- Total branches covered: **40 out of 40**
+- Partial branches remaining: **0**
+
+## Commands Used
+
+**Code Coverage:**
+```bash
+python -m coverage erase
+python -m coverage run --source=bookstore_trade_in -m pytest -v CodeCoverageTest_application.py
+python -m coverage report -m
 ```
+
+**Branch Coverage:**
+```bash
+python -m coverage erase
+python -m coverage run --branch --source=bookstore_trade_in -m pytest -v BranchCoverageTest_application.py
+python -m coverage report -m
+```
+
+## Files
+
+- `bookstore_trade_in.py` – Application under test.
+- `CodeCoverageTest_application.py` – Code coverage test cases.
+- `BranchCoverageTest_application.py` – Branch coverage test cases.
+- `README.md` – Lab work summary.
+
+## Conclusion
+
+Successfully achieved 100% code coverage and 100% branch coverage for the Bookstore Trade-In application through separate and comprehensive test suites.
