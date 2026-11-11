@@ -206,3 +206,52 @@ python -m coverage report -m
 ## Conclusion
 
 Successfully achieved 100% code coverage and 100% branch coverage for the Bookstore Trade-In application through separate and comprehensive test suites.
+
+# Lab 7 – Fuzzing for Input Validation Bugs
+
+## Objective
+To explore fuzz testing using the Hypothesis library, identify input validation bugs, and improve application robustness through defensive programming.
+
+## Tools Used
+- Python 3.12
+- Hypothesis
+- Pytest
+
+## Files
+- `processor.py` – Python application containing three functions for ISBN formatting, depreciation calculation, and condition multiplier lookup. Updated with input validation and error handling.
+- `test_processor.py` – Hypothesis-based fuzz tests for all three functions.
+
+## Implementation
+1. Installed Hypothesis and Pytest.
+2. Executed the original application.
+3. Used Hypothesis to generate unexpected inputs and identify bugs.
+4. Fixed the identified issues using defensive input validation.
+5. Re-ran the application and all fuzz tests.
+
+## Run the Tests
+
+Install dependencies:
+
+```bash
+pip install hypothesis pytest
+```
+
+Run the application:
+
+```bash
+python processor.py
+```
+
+Run the tests:
+
+```bash
+python -m pytest test_processor.py -q
+```
+
+## Result
+All three Hypothesis tests passed successfully after fixing the application.
+
+**Final Test Result:** `3 passed`
+
+## Learning Outcome
+Learned how property-based fuzz testing helps identify unexpected input validation bugs and how defensive programming improves application reliability.
