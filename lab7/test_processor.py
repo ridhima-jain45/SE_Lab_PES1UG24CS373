@@ -1,4 +1,3 @@
-
 from hypothesis import given, strategies as st
 from processor import (
     verify_isbn10_format,
